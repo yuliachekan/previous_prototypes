@@ -1,4 +1,4 @@
-# AngularJS <img align="right" src="https://github.com/Learning-Fuze/prototypes_C2.17/blob/assets/assets/images/logos/LF_LOGO.png?raw=true" width="150">
+# AngularJS <img align="right" src="https://github.com/Learning-Fuze/prototypes_C4.17/blob/assets/assets/images/logos/LF_LOGO.png?raw=true" width="150">
 ### Directive Creation
 
->#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_C2.17/#/AngularJS-Directive-Creation" target="_blank">HERE</a>
+>#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_C4.17/#/AngularJS-Directive-Creation" target="_blank">HERE</a>
