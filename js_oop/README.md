@@ -1,4 +1,4 @@
 # JavaScript OOP <img align="right" src="https://github.com/Learning-Fuze/prototypes_fi_part1/blob/assets/assets/images/logos/LF_LOGO.png?raw=true" width="150">
 ### Object Oriented Programming
 
->#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_fi_part1/#/JS-OOP" target="_blank">HERE</a>
+>#### Instructions can be found <a href="http://lfzprototypes.com/full-immersion/js/oop" target="_blank">HERE</a>
