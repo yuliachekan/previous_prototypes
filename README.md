@@ -4,4 +4,4 @@
 >
 > All available prototype instructions may be viewed by clicking the below link
 >
-> ### <a href="http://learning-fuze.github.io/prototypes_fi_part1/#/" target="_blank">Landing Page</a>
+> ### <a href="http://lfzprototypes.com" target="_blank">Landing Page</a>
