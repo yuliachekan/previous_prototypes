@@ -2,4 +2,3 @@
 ### Repeat Blocks aka Loops
 
 >#### Instructions can be found <a href="http://lfzprototypes.com/full-immersion/js/repeat-blocks" target="_blank">HERE</a>
->#### Available 4/19/2016 @ 8:00am
