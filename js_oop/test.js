@@ -182,6 +182,11 @@ function runTest(testNumber){
                     result: false
                 },
                 {
+                    test: 'transferCoins should of returned 25',
+                    message: '',
+                    result: false
+                },
+                {
                     test: 'Stack one should have 25 coins',
                     message: 'Not tested',
                     result: false
@@ -194,6 +199,11 @@ function runTest(testNumber){
                 {
                     test: 'Transfer 150 coins from stack 2 to stack one',
                     message: 'Not tested',
+                    result: false
+                },
+                {
+                    test: 'transferCoins should of returned 75',
+                    message: '',
                     result: false
                 },
                 {
@@ -221,7 +231,7 @@ function runTest(testNumber){
                         tests[1].result = true;
 
                         try {
-                            stack2.transferCoins(stack1, 25);
+                            var transfer1 = stack2.transferCoins(stack1, 25);
                             tests[2].message = 'No errors occurred during transfer';
                             tests[2].result = true;
                         } catch(err) {
@@ -229,41 +239,55 @@ function runTest(testNumber){
                             console.warn('ERROR: from transfer:', err);
                         }
 
-                        if(stack1.value === 25){
-                            tests[3].message = 'Stack One has 25 coins';
+                        if(transfer1 === 25){
+                            tests[3].message = 'transferCoins returned 25';
                             tests[3].result = true;
                         } else {
-                            tests[3].message = 'Stack One has ' + stack1.value + ' coins';
+                            tests[3].message = 'transferCoins did not return 25. Returned value: ' + transfer1;
+                        }
+
+                        if(stack1.value === 25){
+                            tests[4].message = 'Stack One has 25 coins';
+                            tests[4].result = true;
+                        } else {
+                            tests[4].message = 'Stack One has ' + stack1.value + ' coins';
                         }
 
                         if(stack2.value === 75){
-                            tests[4].message = 'Stack Two has 75 coins';
-                            tests[4].result = true;
+                            tests[5].message = 'Stack Two has 75 coins';
+                            tests[5].result = true;
                         } else {
-                            tests[4].message = 'Stack One has ' + stack2.value + ' coins';
+                            tests[5].message = 'Stack One has ' + stack2.value + ' coins';
                         }
 
                         try{
-                            stack1.transferCoins(stack2, 150);
-                            tests[5].message = 'No errors occurred during transfer';
-                            tests[5].result = true;
+                            var transfer2 = stack1.transferCoins(stack2, 150);
+                            tests[6].message = 'No errors occurred during transfer';
+                            tests[6].result = true;
                         } catch(err) {
-                            tests[5].message = 'Error occurred during transfer';
+                            tests[6].message = 'Error occurred during transfer';
                             console.warn('ERROR: from transfer:', err);
                         }
 
-                        if(stack1.value === 100){
-                            tests[6].message = 'Stack One has 100 coins';
-                            tests[6].result = true;
+                        if(transfer2 === 75){
+                            tests[7].message = 'transferCoins returned 75';
+                            tests[7].result = true;
                         } else {
-                            tests[6].message = 'Stack One has ' + stack1.value + ' coins';
+                            tests[7].message = 'transferCoins did not return 75. Returned value: ' + transfer2;
+                        }
+
+                        if(stack1.value === 100){
+                            tests[8].message = 'Stack One has 100 coins';
+                            tests[8].result = true;
+                        } else {
+                            tests[8].message = 'Stack One has ' + stack1.value + ' coins';
                         }
 
                         if(stack2.value === 0){
-                            tests[7].message = 'Stack Two has 0 coins';
-                            tests[7].result = true;
+                            tests[9].message = 'Stack Two has 0 coins';
+                            tests[9].result = true;
                         } else {
-                            tests[7].message = 'Stack One has ' + stack2.value + ' coins';
+                            tests[9].message = 'Stack One has ' + stack2.value + ' coins';
                         }
                         
                     } else if(typeof stack1.transferCoins === 'function'){
