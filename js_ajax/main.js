@@ -1,17 +1,27 @@
 //Create GLOBAL variable below here on line 2
 
 
-$(document).ready(function(){
-    $('button').click(function(){
-        console.log('click initiated');
-        $.ajax({
-            dataType: 'json',
-            url: 'http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/json',
-            success: function(result) {
-                console.log('AJAX Success function called, with the following result:', result);
 
-            }
-        });
-        console.log('End of click function');
-    });
-});
+$(document).ready(initializeApp);
+
+function initializeApp(){
+    $('button').click(getData);
+}
+
+function getData(){
+    console.log('1) getData called from button click');
+    var ajaxConfig = {
+        dataType: 'json',
+        url: 'http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/json',
+        success: function(result) {
+            
+            console.log('2) AJAX Success function called, with the following result:', result);
+
+        }
+    }
+
+    console.log('3) Making AJAX request');
+    $.ajax(ajaxConfig);
+
+    console.log('4) End of getData');
+}
